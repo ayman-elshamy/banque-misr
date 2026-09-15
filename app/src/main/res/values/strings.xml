@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Banque Misr</string>
+    <string name="bank_masr_image_cd">Bank misr Logo</string>
+    <string name="login_forgot_password_or_username">Forgot username/password?</string>
+    <string name="login_btn">Login</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_password_hide_icon">Toggle password visibility icon</string>
+    <string name="login_help_1">Need help?</string>
+    <string name="login_help_2">Contact us</string>
+    <string name="login_help_link">https://www.banquemisr.com/en/CONTACT-US/Call-Center</string>
+    <string name="login_our_products">Our products</string>
+    <string name="login_exchange_rate">Exchange rate</string>
+    <string name="login_security_tips">Security tips</string>
+    <string name="login_nearest_branch">Nearest branch or ATM</string>
+</resources>

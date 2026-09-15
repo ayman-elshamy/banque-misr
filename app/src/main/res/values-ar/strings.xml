@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">بنك مصر</string>
+    <string name="bank_masr_image_cd">شعار بنك مصر</string>
+    <string name="login_forgot_password_or_username">نسيت اسم المستخدم/ كلمة المرور؟</string>
+    <string name="login_btn">تسجيل الدخول</string>
+    <string name="login_username">اسم المستخدم</string>
+    <string name="login_password">كلمة المرور</string>
+    <string name="login_password_hide_icon">أيقونة إظهار/إخفاء كلمة المرور</string>
+    <string name="login_help_1">مزيد من المساعده؟</string>
+    <string name="login_help_2">اتصل بنا</string>
+    <string name="login_help_link">https://www.banquemisr.com/ar/CONTACT-US/Call-Center</string>
+    <string name="login_our_products">منتجاتنا</string>
+    <string name="login_exchange_rate">سعر الصرف</string>
+    <string name="login_security_tips">نصائح أمنية</string>
+    <string name="login_nearest_branch">أقرب فرع أو ماكينة صراف آلي</string>
+</resources>
