@@ -19,6 +19,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.text.input.TextObfuscationMode
 import androidx.compose.foundation.text.input.rememberTextFieldState
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -35,6 +36,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
@@ -86,6 +88,10 @@ fun LoginScreen(
 
     val usernameTextField = rememberTextFieldState()
     val passwordTextField = rememberTextFieldState()
+
+
+    val loginStatus = usernameTextField.text.isNotBlank()&&
+            passwordTextField.text.isNotBlank()
 
 
     // -----------------------------
@@ -300,9 +306,10 @@ fun LoginScreen(
                 .height(55.dp),
 
             shape = RoundedCornerShape(8.dp),
+            enabled = loginStatus,
 
             colors = ButtonDefaults.buttonColors(
-                containerColor = Red
+                containerColor = if (loginStatus)Red else Color.DarkGray
             )
         ) {
 
@@ -362,7 +369,7 @@ fun LoginScreen(
 
 
         // =============================
-        // Bottom options
+        // services
         // =============================
 
         Row(
@@ -370,109 +377,35 @@ fun LoginScreen(
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
 
+            ServiceItem(
+                image = R.drawable.our_products,
+                text = stringResource(R.string.login_our_products),
+                modifier = Modifier.weight(1f)
+            )
 
-            // -------------------------
-            // Our products
-            // -------------------------
+            ServiceItem(
+                image = R.drawable.exchange_rate,
+                text = stringResource(R.string.login_exchange_rate),
+                modifier = Modifier.weight(1f)
+            )
 
-            Column(
-                modifier = Modifier.weight(1f),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
+            ServiceItem(
+                image = R.drawable.security_tips,
+                text = stringResource(R.string.login_security_tips),
+                modifier = Modifier.weight(1f)
+            )
 
-                Image(
-                    painter = painterResource(
-                        id = R.drawable.our_products
-                    ),
-                    contentDescription = null,
-                    modifier = Modifier.size(80.dp)
-                )
-
-                Text(
-                    text = stringResource(
-                        R.string.login_our_products
-                    ),
-                    fontSize = 12.sp
-                )
-            }
-
-
-            // -------------------------
-            // Exchange rate
-            // -------------------------
-
-            Column(
-                modifier = Modifier.weight(1f),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-
-                Image(
-                    painter = painterResource(
-                        id = R.drawable.exchange_rate
-                    ),
-                    contentDescription = null,
-                    modifier = Modifier.size(80.dp)
-                )
-
-                Text(
-                    text = stringResource(
-                        R.string.login_exchange_rate
-                    ),
-                    fontSize = 12.sp
-                )
-            }
-
-
-            // -------------------------
-            // Security tips
-            // -------------------------
-
-            Column(
-                modifier = Modifier.weight(1f),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-
-                Image(
-                    painter = painterResource(
-                        id = R.drawable.security_tips
-                    ),
-                    contentDescription = null,
-                    modifier = Modifier.size(80.dp)
-                )
-
-                Text(
-                    text = stringResource(
-                        R.string.login_security_tips
-                    ),
-                    fontSize = 12.sp
-                )
-            }
-
-
-            // -------------------------
-            // Nearest branch / ATM
-            // -------------------------
-
-            Column(
-                modifier = Modifier.weight(1f),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-
-                Image(
-                    painter = painterResource(
-                        id = R.drawable.nearest_branch_or_atm
-                    ),
-                    contentDescription = null,
-                    modifier = Modifier.size(80.dp)
-                )
-
-                Text(
-                    text = stringResource(
-                        R.string.login_nearest_branch
-                    ),
-                    fontSize = 12.sp
-                )
-            }
+            ServiceItem(
+                image = R.drawable.nearest_branch_or_atm,
+                text = stringResource(R.string.login_nearest_branch),
+                modifier = Modifier.weight(1f)
+            )
         }
     }
+}
+
+@Preview(showSystemUi = true)
+@Composable
+private fun loginPreview() {
+LoginScreen()
 }
