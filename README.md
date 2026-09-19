@@ -6,7 +6,7 @@ A simple Banque Misr login screen built with Kotlin and Jetpack Compose.
 
 - Login screen
 - Show / hide password
-- English & Arabic language support
+-   Dynamic localization support
 - Arabic RTL support
 
 ## Built With
