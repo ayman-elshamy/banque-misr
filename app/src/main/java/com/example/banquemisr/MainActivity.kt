@@ -309,7 +309,9 @@ fun LoginScreen(
             enabled = loginStatus,
             colors = ButtonDefaults.buttonColors(
                 containerColor = Red ,
-                disabledContentColor = Color.DarkGray
+                contentColor = Color.White,
+                disabledContentColor = Color.Black,
+                disabledContainerColor = Color.DarkGray
             )
 
 
