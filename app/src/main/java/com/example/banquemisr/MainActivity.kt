@@ -307,10 +307,13 @@ fun LoginScreen(
 
             shape = RoundedCornerShape(8.dp),
             enabled = loginStatus,
-
             colors = ButtonDefaults.buttonColors(
-                containerColor = if (loginStatus)Red else Color.DarkGray
+                containerColor = Red ,
+                disabledContentColor = Color.DarkGray
             )
+
+
+
         ) {
 
             Text(
@@ -380,25 +383,25 @@ fun LoginScreen(
             ServiceItem(
                 image = R.drawable.our_products,
                 text = stringResource(R.string.login_our_products),
-                modifier = Modifier.weight(1f)
+
             )
 
             ServiceItem(
                 image = R.drawable.exchange_rate,
                 text = stringResource(R.string.login_exchange_rate),
-                modifier = Modifier.weight(1f)
+
             )
 
             ServiceItem(
                 image = R.drawable.security_tips,
                 text = stringResource(R.string.login_security_tips),
-                modifier = Modifier.weight(1f)
+
             )
 
             ServiceItem(
                 image = R.drawable.nearest_branch_or_atm,
                 text = stringResource(R.string.login_nearest_branch),
-                modifier = Modifier.weight(1f)
+
             )
         }
     }
